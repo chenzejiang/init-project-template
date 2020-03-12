@@ -1,0 +1,23 @@
+body{
+  background: #000;
+  color: #fff;
+}
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  font-size: 0;
+}
+.videoBox{
+  height: 300px;
+  width: 100vw;
+  text-align: center;
+  background: #f99;
+}
+.videoBox video{
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
