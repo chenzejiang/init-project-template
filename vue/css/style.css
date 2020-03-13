@@ -1,23 +1,87 @@
-body{
-  background: #000;
-  color: #fff;
-}
-.container{
+body {
+  background: #081826;
+  color: #fff; }
+
+#app {
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
-  font-size: 0;
-}
-.videoBox{
-  height: 300px;
-  width: 100vw;
-  text-align: center;
-  background: #f99;
-}
-.videoBox video{
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  text-align: center;
-}
+  font-size: 0; }
+  #app .container {
+    position: relative; }
+    #app .container .logo {
+      width: 30px;
+      position: absolute;
+      top: -120px;
+      left: 10px; }
+  #app .videoBox {
+    max-height: 300px;
+    width: 100vw;
+    text-align: center;
+    background: #000; }
+    #app .videoBox video {
+      height: 100%;
+      width: 100%;
+      margin: 0 auto;
+      text-align: center; }
+  #app .topText {
+    position: absolute;
+    width: 100%;
+    top: -120px;
+    left: 0; }
+    #app .topText p {
+      color: #05BF7D;
+      font-size: 24px;
+      text-align: center;
+      text-shadow: 0px 0px 6px rgba(5, 191, 125, 0.3); }
+    #app .topText .p2 {
+      margin-left: 80px; }
+  #app .bottomText {
+    position: absolute;
+    width: 100%;
+    bottom: -120px;
+    left: 0;
+    padding-left: 15px; }
+    #app .bottomText p {
+      color: #B0B6D9;
+      font-size: 16px;
+      line-height: 26px;
+      text-align: left; }
+  #app .tips {
+    color: #f0f0f0;
+    font-size: 18px;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    padding-left: 10px;
+    width: 100%; }
+  #app .videoTips {
+    color: #f0f0f0;
+    padding: 7px 0;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #111; }
+  #app .step2 {
+    background: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 15px;
+    text-align: left; }
+    #app .step2 .en {
+      color: #afda6f;
+      font-size: 32px;
+      text-align: left;
+      margin: 10px 0 15px 0; }
+    #app .step2 .cn {
+      color: #afda6f;
+      font-size: 26px;
+      text-align: left;
+      opacity: 0.9; }

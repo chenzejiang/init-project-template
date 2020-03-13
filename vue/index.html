@@ -14,17 +14,36 @@
 </head>
 <body>
     <div id="app">
-        1123
         <div class="container">
+            <img class="logo" src="img/logo2.png" />
+            <div class="topText">
+                <p class="p1">每天跟读一句</p>
+                <p class="p2">掌握流利口语</p>
+            </div>
             <div class="videoBox">
-                <video src="video/1.mp4" autoplay preload>
+                <video src="video/1.mp4" ref="video1" preload >
                 您的浏览器不支持 video 标签。
                 </video>
+                <div class="step2" v-show="step === 2 || step === 3">
+                    <p class="en">{{ en }}</p>
+                    <p class="cn">{{ cn }}</p>
+                </div>
+                <p class="videoTips" v-show="step === 1">不看字幕</p>
             </div>
+            <div class="tips">{{ tips }}</div>
+            <div class="bottomText">
+                <p class="p1">1. 反复观看3次注意听的每个发音</p>
+                <p class="p2">2. 评论区默写3遍增强记忆</p>
+                <p class="p3">3. 每天学口语，记得关注转发一起进步</p>
+            </div>
+            <audio class="audio1" preload ref="audio1" src="audio/1.mp3"></audio>
+            <audio class="audio2" preload ref="audio2" src="audio/2.mp3"></audio>
+            <audio class="slowAudio" preload ref="slowAudio" :src="`https://fanyi.baidu.com/gettts?lan=en&text=${encodeURIComponent(en)}&spd=1&source=web`"></audio>
+            <audio class="fastAudio" preload ref="fastAudio" :src="`https://fanyi.baidu.com/gettts?lan=en&text=${encodeURIComponent(en)}&spd=3&source=web`"></audio>
         </div>
     </div>
     <!--JS-->
-    <script src="http://cdn.bootcss.com/vue/2.6.10/vue.min.js"></script>
+    <script src="js/vue.min.js"></script>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/base.js"></script>
 </body>
