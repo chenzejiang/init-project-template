@@ -1,0 +1,43 @@
+body {
+  background: #f0f0f0;
+  color: #fff; }
+
+#app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  font-size: 0; }
+  #app .container {
+    position: relative; }
+    #app .container .cardBox {
+      width: 294px;
+      height: 90px;
+      margin: 12px auto;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden; }
+      #app .container .cardBox .cardBoxImg {
+        width: 100%;
+        height: 100%; }
+      #app .container .cardBox .price {
+        position: absolute;
+        top: 6px;
+        left: 12px;
+        font-size: 26px;
+        color: #fff; }
+      #app .container .cardBox .goodsName {
+        font-size: 12px;
+        line-height: 16px;
+        position: absolute;
+        top: 40px;
+        left: 18px;
+        color: rgba(255, 255, 255, 0.7); }
+      #app .container .cardBox .detail {
+        font-size: 10px;
+        position: absolute;
+        bottom: 10px;
+        left: 12px;
+        color: rgba(255, 255, 255, 0.7); }
+
+/*# sourceMappingURL=style.css.map */

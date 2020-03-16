@@ -1,0 +1,53 @@
+// $bgColor: #2F3D59;
+// $topColor: #A0B3D9;
+// $bottomColor: #A0B3D9;
+// $tipsColor: #A0B3D9;
+
+body{
+  background: #f0f0f0;
+  color: #fff;
+}
+#app{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  font-size: 0;
+  .container{
+    position: relative;
+    .cardBox{
+      width: 294px;
+      height: 90px;
+      margin: 12px auto;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      .cardBoxImg{
+          width: 100%;
+          height: 100%;
+      }
+      .price{
+          position: absolute;
+          top: 6px;
+          left: 12px;
+          font-size: 26px;
+          color: #fff;
+      }
+      .goodsName{
+          font-size: 12px;
+          line-height: 16px;
+          position: absolute;
+          top: 40px;
+          left: 18px;
+          color: rgba(255, 255, 255, 0.7);
+      }
+      .detail{
+          font-size: 10px;
+          position: absolute;
+          bottom: 10px;
+          left: 12px;
+          color: rgba(255, 255, 255, 0.7);
+      }
+    }
+  }
+}
