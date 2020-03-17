@@ -1,7 +1,5 @@
-// $bgColor: #2F3D59;
-// $topColor: #A0B3D9;
-// $bottomColor: #A0B3D9;
-// $tipsColor: #A0B3D9;
+@import 'px2rem.scss';
+$designWidth: 750;
 
 body{
   background: #f0f0f0;
@@ -10,16 +8,75 @@ body{
 #app{
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
   font-size: 0;
+  .loadingBox{
+    margin: 100px auto;
+    text-align: center;
+    .loading{
+      width: px2rem(80);
+      height: px2rem(80);
+      background: url(../img/loading.png) no-repeat;
+      background-size: cover;
+      animation: rotate 0.5s linear infinite;
+      display: inline-block;
+      margin: 0 auto;
+    }
+  }
+  // 模态框
+  .modal{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    .modalBox{
+      width: px2rem(550);
+      background: #fff;
+      border-radius: px2rem(10);
+      .content{
+        min-height: px2rem(200);
+        padding: px2rem(20) px2rem(20);
+        display: flex;
+        font-size: px2rem(30);
+        align-items: center;
+        justify-content: center;
+        color: #555;
+      }
+      .modalBtn{
+        border-top: px2rem(1) solid #eee;
+        color: #2F80F6;
+        font-size: px2rem(30);
+        height: px2rem(82);
+        text-align: center;
+        line-height: px2rem(82);
+      }
+    }
+  }
   .container{
+    display: none;
     position: relative;
+
+    .userInfo{
+      font-size: px2rem(32);
+      color: #404040;
+      text-align: center;
+      margin-top: px2rem(60);
+    }
+    .tips{
+      color: #a2a2a2;
+      font-size: px2rem(24);
+      text-align: center;
+      margin-top: px2rem(40);
+    }
     .cardBox{
-      width: 294px;
-      height: 90px;
-      margin: 12px auto;
-      border-radius: 10px;
+      width: px2rem(690);
+      height: px2rem(212);
+      margin: px2rem(30) auto;
+      border-radius: px2rem(20);
       position: relative;
       overflow: hidden;
       .cardBoxImg{
@@ -28,26 +85,31 @@ body{
       }
       .price{
           position: absolute;
-          top: 6px;
-          left: 12px;
-          font-size: 26px;
+          top: px2rem(12);
+          left: px2rem(30);
+          font-size: px2rem(60);
           color: #fff;
       }
       .goodsName{
-          font-size: 12px;
-          line-height: 16px;
+          font-size: px2rem(24);
+          line-height: px2rem(36);
           position: absolute;
-          top: 40px;
-          left: 18px;
+          top: px2rem(88);
+          left: px2rem(40);
           color: rgba(255, 255, 255, 0.7);
       }
       .detail{
-          font-size: 10px;
+          font-size: px2rem(20);
           position: absolute;
-          bottom: 10px;
-          left: 12px;
+          bottom: px2rem(20);
+          left: px2rem(30);
           color: rgba(255, 255, 255, 0.7);
       }
     }
   }
+}
+
+@keyframes rotate{
+  from{ transform: rotate(0deg) }
+  to{ transform: rotate(359deg) }
 }

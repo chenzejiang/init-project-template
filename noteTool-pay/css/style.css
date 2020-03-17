@@ -5,16 +5,65 @@ body {
 #app {
   height: 100vh;
   width: 100vw;
-  display: flex;
-  justify-content: center;
   font-size: 0; }
+  #app .loadingBox {
+    margin: 100px auto;
+    text-align: center; }
+    #app .loadingBox .loading {
+      width: 1.70667rem;
+      height: 1.70667rem;
+      background: url(../img/loading.png) no-repeat;
+      background-size: cover;
+      animation: rotate 0.5s linear infinite;
+      display: inline-block;
+      margin: 0 auto; }
+  #app .modal {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.2);
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center; }
+    #app .modal .modalBox {
+      width: 11.73333rem;
+      background: #fff;
+      border-radius: 0.21333rem; }
+      #app .modal .modalBox .content {
+        min-height: 4.26667rem;
+        padding: 0.42667rem 0.42667rem;
+        display: flex;
+        font-size: 0.64rem;
+        align-items: center;
+        justify-content: center;
+        color: #555; }
+      #app .modal .modalBox .modalBtn {
+        border-top: 0.02133rem solid #eee;
+        color: #2F80F6;
+        font-size: 0.64rem;
+        height: 1.74933rem;
+        text-align: center;
+        line-height: 1.74933rem; }
   #app .container {
+    display: none;
     position: relative; }
+    #app .container .userInfo {
+      font-size: 0.68267rem;
+      color: #404040;
+      text-align: center;
+      margin-top: 1.28rem; }
+    #app .container .tips {
+      color: #a2a2a2;
+      font-size: 0.512rem;
+      text-align: center;
+      margin-top: 0.85333rem; }
     #app .container .cardBox {
-      width: 294px;
-      height: 90px;
-      margin: 12px auto;
-      border-radius: 10px;
+      width: 14.72rem;
+      height: 4.52267rem;
+      margin: 0.64rem auto;
+      border-radius: 0.42667rem;
       position: relative;
       overflow: hidden; }
       #app .container .cardBox .cardBoxImg {
@@ -22,22 +71,28 @@ body {
         height: 100%; }
       #app .container .cardBox .price {
         position: absolute;
-        top: 6px;
-        left: 12px;
-        font-size: 26px;
+        top: 0.256rem;
+        left: 0.64rem;
+        font-size: 1.28rem;
         color: #fff; }
       #app .container .cardBox .goodsName {
-        font-size: 12px;
-        line-height: 16px;
+        font-size: 0.512rem;
+        line-height: 0.768rem;
         position: absolute;
-        top: 40px;
-        left: 18px;
+        top: 1.87733rem;
+        left: 0.85333rem;
         color: rgba(255, 255, 255, 0.7); }
       #app .container .cardBox .detail {
-        font-size: 10px;
+        font-size: 0.42667rem;
         position: absolute;
-        bottom: 10px;
-        left: 12px;
+        bottom: 0.42667rem;
+        left: 0.64rem;
         color: rgba(255, 255, 255, 0.7); }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
 
 /*# sourceMappingURL=style.css.map */
