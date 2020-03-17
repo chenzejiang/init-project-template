@@ -1,6 +1,7 @@
 ﻿new Vue({
     el:'#app',
     data: {
+        showBtn: true,
         message:'hello vue.js.',
         step: 1, // 步骤
         tips: '原生听一遍',
@@ -19,7 +20,7 @@
         this.cn = getQueryString('cn')
     },
     mounted() {
-        this.$refs.video1.play();
+        
 
         /* 视频播放完成 */
         this.$refs.video1.addEventListener("ended", () => {
@@ -54,5 +55,9 @@
         });
     },
     methods: {
+        playVideo(){
+            this.showBtn = false;
+            this.$refs.video1.play();
+        }
     }
 });

@@ -1,4 +1,13 @@
-﻿<!doctype html>
+﻿<!--
+ * @Author: webJ
+ * @Date: 2020-03-13 21:13:25
+ * @LastEditTime: 2020-03-14 17:33:41
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /vue/index.html
+ -->
+
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -21,7 +30,7 @@
                 <p class="p2">掌握流利口语</p>
             </div>
             <div class="videoBox">
-                <video src="video/1.mp4" ref="video1" preload >
+                <video src="video/1.mp4" ref="video1" x5-playsinline="" playsinline="" webkit-playsinline="" preload >
                 您的浏览器不支持 video 标签。
                 </video>
                 <div class="step2" v-show="step === 2 || step === 3">
@@ -41,8 +50,10 @@
             <audio class="slowAudio" preload ref="slowAudio" :src="`https://fanyi.baidu.com/gettts?lan=en&text=${encodeURIComponent(en)}&spd=1&source=web`"></audio>
             <audio class="fastAudio" preload ref="fastAudio" :src="`https://fanyi.baidu.com/gettts?lan=en&text=${encodeURIComponent(en)}&spd=3&source=web`"></audio>
         </div>
+        <div class="fullButton" @click="playVideo" v-show="showBtn">播放</div>
     </div>
     <!--JS-->
+    <script src="http://cdn.bootcss.com/vConsole/3.3.4/vconsole.min.js"></script>
     <script src="js/vue.min.js"></script>
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/base.js"></script>

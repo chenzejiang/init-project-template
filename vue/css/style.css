@@ -5,9 +5,22 @@ body {
 #app {
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
   display: flex;
   align-items: center;
   font-size: 0; }
+  #app .fullButton {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0; }
+  #app audio {
+    opacity: 0;
+    position: absolute;
+    top: -100%;
+    left: -100%; }
   #app .container {
     position: relative; }
     #app .container .logo {
@@ -85,3 +98,5 @@ body {
       font-size: 26px;
       text-align: left;
       opacity: 0.9; }
+
+/*# sourceMappingURL=style.css.map */
