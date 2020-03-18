@@ -1,7 +1,6 @@
-// $bgColor: #2F3D59;
-// $topColor: #A0B3D9;
-// $bottomColor: #A0B3D9;
-// $tipsColor: #A0B3D9;
+@import 'px2rem.scss';
+$designWidth: 640;
+
 
 $bgColor: #081826;
 // $topColor: #D9BEB4;
@@ -24,11 +23,11 @@ body{
   align-items: center;
   font-size: 0;
   .fullButton{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background: rgba(0, 0, 0, 0.8);
     position: absolute;
-    font-size: 40px;
+    font-size: px2rem(80);
     text-align: center;
     color: #fff;
     top: 0;
@@ -43,14 +42,14 @@ body{
   .container{
     position: relative;
     .logo{
-      width: 30px;
+      width: px2rem(60);
       position: absolute;
-      top: -120px;
-      left: 10px;
+      top: px2rem(-200);
+      left: px2rem(40);
     }
   }
   .videoBox{
-    max-height: 300px;
+    max-height: px2rem(600);
     width: 100vw;
     text-align: center;
     background: #000;
@@ -64,44 +63,44 @@ body{
   .topText{
     position: absolute;
     width: 100%;
-    top: -120px;
+    top: px2rem(-200);
     left: 0;
     p{
       color: $topColor;
-      font-size: 24px;
+      font-size: px2rem(48);
       text-align: center;
-      text-shadow: 0px 0px 6px rgba(5, 191, 125, 0.3);
+      text-shadow: 0px 0px px2rem(-12) rgba(5, 191, 125, 0.3);
     }
     .p2{
-      margin-left: 80px;
+      margin-left: px2rem(160);
     }
   }
   .bottomText {
     position: absolute;
     width: 100%;
-    bottom: -120px;
+    bottom: px2rem(-200);
     left: 0;
-    padding-left: 15px;
+    padding-left: px2rem(40);
     p{
-      color: $bottomColor;;
-      font-size: 16px;
-      line-height: 26px;
+      color: $bottomColor;
+      font-size: px2rem(28);
+      line-height: px2rem(48);
       text-align: left;
     }
   }
   .tips{
     color: $tipsColor;
-    font-size: 18px;
+    font-size: px2rem(36);
     position: absolute;
-    top: -30px;
+    top: px2rem(-60);
     left: 0;
-    padding-left: 10px;
+    padding-left: px2rem(40);
     width: 100%;
   }
   .videoTips{
     color: $tipsColor;
-    padding: 7px 0;
-    font-size: 18px;
+    padding: px2rem(14) 0;
+    font-size: px2rem(36);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -116,17 +115,17 @@ body{
     position: absolute;
     top: 0;
     left: 0;
-    padding: 10px 15px;
+    padding: px2rem(40) px2rem(40);
     text-align: left;
     .en{
       color: $step2TextColor;
-      font-size: 32px;
+      font-size: px2rem(64);
       text-align: left;
-      margin: 10px 0 15px 0;
+      margin: px2rem(20) 0 px2rem(20) 0;
     }
     .cn{
       color: $step2TextColor;
-      font-size: 26px;
+      font-size: px2rem(52);
       text-align: left;
       opacity: 0.9;
     }

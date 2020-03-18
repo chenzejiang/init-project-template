@@ -48,12 +48,11 @@
 
         /* 快音效 播放完成 */
         this.$refs.fastAudio.addEventListener("ended", () => {
-            // this.step = 1;
-            // this.tips = '原生听一遍';
-            // this.$refs.video1.play();
-            this.step = 1;
-            console.log('结束了重置开始');
-            this.showBtn = true;
+            setTimeout(() => {
+                this.step = 1;
+                console.log('结束了重置开始');
+                this.showBtn = true;
+            }, 1000)
         });
     },
     methods: {
